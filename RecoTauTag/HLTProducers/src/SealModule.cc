@@ -27,6 +27,10 @@
 #include "RecoTauTag/HLTProducers/interface/PFJetsMaxInvMassModule.h"
 #include "RecoTauTag/HLTProducers/interface/PFTauL1TJetsMatching.h"
 
+#include "RecoTauTag/HLTProducers/interface/L1TPFJetsSimpleMatching.h"
+#include "RecoTauTag/HLTProducers/interface/PFJetsTauCorrelationCondition.h"
+
+
 typedef L1TJetsMatching<reco::PFJet> L1TPFJetsMatching;
 typedef L1TJetsMatching<reco::CaloJet> L1TCaloJetsMatching;
 
@@ -40,6 +44,7 @@ using TauRegionalPixelSeedTrackingRegionEDProducer = TrackingRegionEDProducerT<T
 DEFINE_FWK_MODULE(TauRegionalPixelSeedTrackingRegionEDProducer);
 using TrackingRegionsFromBeamSpotAndL2TauEDProducer = TrackingRegionEDProducerT<TrackingRegionsFromBeamSpotAndL2Tau>;
 DEFINE_FWK_MODULE(TrackingRegionsFromBeamSpotAndL2TauEDProducer);
+
 
 DEFINE_FWK_MODULE(L2TauJetsMerger);
 DEFINE_FWK_MODULE(L1HLTJetsMatching);
@@ -60,3 +65,5 @@ DEFINE_FWK_MODULE(L1TPFJetsMatching);
 DEFINE_FWK_MODULE(PFJetsTauOverlapRemoval);
 DEFINE_FWK_MODULE(PFJetsMaxInvMassModule);
 DEFINE_FWK_MODULE(PFTauL1TJetsMatching);
+DEFINE_FWK_MODULE(L1TPFJetsSimpleMatching);
+DEFINE_FWK_MODULE(PFJetsTauCorrelationCondition);
